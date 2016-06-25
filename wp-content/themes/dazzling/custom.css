@@ -1,0 +1,38 @@
+/* Change text colors to black */
+
+a {
+	color: black;
+}
+
+.navbar > .container .navbar-brand {
+	color: black;
+}
+
+.navbar > .container .navbar-brand:hover {
+	color: #0B7084;
+}
+
+.entry-meta .fa {
+	color: black;
+}
+
+/* Change hover color on links */
+
+a:hover {
+	color: #0B7084;
+}
+
+/* style menu items */
+.navbar-default .navbar-nav li a:link,
+.navbar-default .navbar-nav li a:visited,
+.navbar-default .navbar-nav li a:active {
+	color: #e6f0f2;
+	background-color: #0B7084;
+	border: solid #e6f0f2 1px;
+}
+
+.navbar-default .navbar-nav li a:hover,
+.navbar-default .navbar-nav .active a:hover {
+	color: white;
+	background-color: #3b8c9c;
+}

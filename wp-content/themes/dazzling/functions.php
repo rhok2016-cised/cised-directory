@@ -77,7 +77,7 @@ function dazzling_setup() {
    */
   add_theme_support( 'title-tag' );
   
-  wp_enqueue_style( 'custom', get_template_directory_uri() . '/custom.css', array('dazzling-style') );
+  wp_enqueue_style( 'custom', get_template_directory_uri() . '/custom.css', array('dazzling-style','dazzling-bootstrap') );
 }
 endif; // dazzling_setup
 add_action( 'after_setup_theme', 'dazzling_setup' );
