@@ -16,10 +16,13 @@
 	<?php the_content(); ?>
 
 	<?php
+		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		
 		$args = array(
 			'post_type' => 'social-enterprise',
 			'orderby'   => 'title',
 			'order'     => 'ASC',
+			'paged'     => $paged,
 		);
 		
 		$cluster_field_key = "field_576ebddb6a863"; //primary cluster
@@ -133,7 +136,13 @@
 			<h2><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $post->post_title; ?></a></h2>
 			<?php echo get_field('description_of_business', $post->ID); ?>
 		</article>
+		
 		<?php endwhile; endif; ?>
+		
+		<nav class="pagination-nav">
+			<?php previous_posts_link( 'Previous Page &raquo;', $filter_query->max_num_pages ); ?>
+			<?php next_posts_link('Next Page &raquo;', $filter_query->max_num_pages ); ?>
+		</nav>
 	</div>
 
 	<footer class="entry-footer">
