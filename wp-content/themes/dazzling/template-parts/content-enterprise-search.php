@@ -28,8 +28,12 @@
 		$segment_field_key = "field_576ebe8d07736"; //segments
 		$segment_field = get_field_object($segment_field_key);
 		
+		$purpose_field_key = "field_576ebe5d07734"; //purpose
+		$purpose_field = get_field_object($purpose_field_key);
+		
 		$cluster  = isset($_GET['cluster']) ? $_GET['cluster'] : '';
 		$segments = isset($_GET['segments']) ? $_GET['segments'] : '';
+		$purpose  = isset($_GET['purpose']) ? $_GET['purpose'] : '';
 		$keyword  = isset($_GET['keyword']) ? sanitize_text_field($_GET['keyword']) : '';
 		
 		$args_meta = array('relation' => 'OR');
@@ -47,6 +51,19 @@
 			$args_meta[] = array(
 				'key'     => 'secondary_cluster',
 				'value'   => $cluster,
+				'compare' => 'LIKE',
+			);
+		}
+		
+		if($purpose) {
+			$args_meta[] = array(
+				'key'     => 'primary_purpose',
+				'value'   => $purpose,
+				'compare' => 'LIKE',
+			);
+			$args_meta[] = array(
+				'key'     => 'secondary_purpose',
+				'value'   => $purpose,
 				'compare' => 'LIKE',
 			);
 		}
@@ -77,6 +94,18 @@
 					<option value="">Select Cluster</option>
 					<?php foreach($cluster_field['choices'] as $option_key => $option_value) : ?>
 						<option value="<?php echo $option_value; ?>"<?php if($option_value == $cluster) {?> selected="selected"<?php } ?>><?php echo $option_value; ?></option>
+					<?php endforeach; ?>
+				</select>
+			</label>
+		</div>
+		
+		<div class="directory-search-row">
+			<p><strong>Purpose</strong></p>
+			<label for="directory-search-purpose">
+				<select id="directory-search-purpose" name="purpose">
+					<option value="">Select Purpose</option>
+					<?php foreach($purpose_field['choices'] as $option_key => $option_value) : ?>
+						<option value="<?php echo $option_value; ?>"<?php if($option_value == $purpose) {?> selected="selected"<?php } ?>><?php echo $option_value; ?></option>
 					<?php endforeach; ?>
 				</select>
 			</label>
