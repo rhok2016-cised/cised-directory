@@ -36,6 +36,12 @@
 				<strong>Phone:</strong> <?php echo get_field('phone_main'); ?><br>
 				<strong>Email:</strong> <?php echo get_field('email'); ?>
 			</p>
+			
+			<h2><?php _e('Primary Purpose', 'cised'); ?></h2>
+			<p><?php echo get_field('primary_purpose'); ?></p>
+			
+			<h2><?php _e('Secondary Purpose', 'cised'); ?></h2>
+			<p><?php echo get_field('secondary_purpose'); ?></p>
 		</div>
 		
 		<?php
