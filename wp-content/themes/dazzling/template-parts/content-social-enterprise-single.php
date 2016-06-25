@@ -10,13 +10,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
-	<?php twentysixteen_post_thumbnail(); ?>
+	<?php the_post_thumbnail('full'); ?>
 	
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php twentysixteen_excerpt(); ?>
+	<?php the_excerpt(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -55,7 +55,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php twentysixteen_entry_meta(); ?>
 		<?php
 			edit_post_link(
 				sprintf(
