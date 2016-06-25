@@ -31,6 +31,7 @@
 		$cluster  = isset($_GET['cluster']) ? $_GET['cluster'] : '';
 		$segments = isset($_GET['segments']) ? $_GET['segments'] : '';
 		
+		$filter_query = new WP_Query($args);
 	?>
 	
 	<form method="get" id="directory-search">
