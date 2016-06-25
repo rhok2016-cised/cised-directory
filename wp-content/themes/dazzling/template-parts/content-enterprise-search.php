@@ -22,12 +22,45 @@
 			'order'     => 'ASC',
 		);
 		
+		$cluster_field_key = "field_576ebddb6a863"; //primary cluster
+		$cluster_field = get_field_object($cluster_field_key);
+		
+		$segment_field_key = "field_576ebe8d07736"; //segments
+		$segment_field = get_field_object($segment_field_key);
+		
 		$cluster  = isset($_GET['cluster']) ? $_GET['cluster'] : '';
 		$segments = isset($_GET['segments']) ? $_GET['segments'] : '';
 		
 	?>
 	
-	
+	<form method="get" id="directory-search">
+		<div class="directory-search-row">
+			<label for="directory-search-title">Name</label>
+			<input name="post_title" id="directory-search-title" type="search">
+		</div>
+		
+		<div class="directory-search-row">
+			<label for="directory-search-cluster">
+				<select id="directory-search-cluster" name="cluster">
+					<?php foreach($cluster['choices'] as $option_key => $option_value) : ?>
+						<option value="<?php echo $option_value; ?>"><?php echo $option_value; ?></option>
+					<?php endforeach; ?>
+				</select>
+			</label>
+		</div>
+		
+		<div class="directory-search-row">
+			<label for="directory-search-segment">
+				<?php foreach($cluster['choices'] as $option_key => $option_value) : ?>
+					<input type="checkbox" value="<?php echo $option_value; ?>" id="directory-segment-<?php echo $option_key; ?>"><label for="directory-segment-<?php echo $option_key; ?>"><?php echo $option_value; ?></label>
+				<?php endforeach; ?>
+			</label>
+		</div>
+		
+		<div class="directory-search-row">
+			<input type="submit" class="button">
+		</div>
+	</form>
 	
 	<div class="search-results enterprise-list">
 		
