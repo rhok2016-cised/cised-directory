@@ -1,6 +1,6 @@
 <?php
 /**
- * The template part for displaying the enterprise search formc
+ * The template part for displaying the enterprise search form
  */
 ?>
 

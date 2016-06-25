@@ -11,7 +11,7 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'template-parts/content-social-enterprise', 'single' ); ?>
+				<?php get_template_part( 'template-parts/content-enterprise', 'search' ); ?>
 
 			<?php endwhile; // end of the loop. ?>
 
