@@ -11,8 +11,9 @@
 	margin-left: 1em;
 }
 .btn.btn-default.read-more.btn-search:hover {
-	background: #fff;
-	color: #6ba132;
+	background-color: #336600;
+    	border-color: #336600;
+    	text-decoration: none;
 }
 
 #directory-search-title {

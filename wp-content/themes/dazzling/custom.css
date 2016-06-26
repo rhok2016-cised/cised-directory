@@ -9,7 +9,7 @@ a {
 }
 
 .navbar > .container .navbar-brand:hover {
-	color: #0B7084;
+	color: #669933;
 }
 
 .entry-meta .fa {
@@ -19,22 +19,7 @@ a {
 /* Change hover color on links */
 
 a:hover {
-	color: #0B7084;
-}
-
-/* style menu items */
-.navbar-default .navbar-nav li a:link,
-.navbar-default .navbar-nav li a:visited,
-.navbar-default .navbar-nav li a:active {
-	color: #e6f0f2;
-	background-color: #0B7084;
-	border: solid #e6f0f2 1px;
-}
-
-.navbar-default .navbar-nav li a:hover,
-.navbar-default .navbar-nav .active a:hover {
-	color: white;
-	background-color: #3b8c9c;
+	color: #6ba132;
 }
 
 /**
@@ -77,25 +62,29 @@ body.home .search-field {
 }
 
 body.home .button,
-.gform_button,
-.search-results .pagination-nav a {
-    background: #6ba132;
-    border: 1px solid #6ba132;
+.search-results .pagination-nav a,
+.navbar-default .navbar-nav li a:link,
+.navbar-default .navbar-nav li a:visited,
+.navbar-default .navbar-nav li a:active {
+    background: #669933;
+    border: 1px solid #669933;
     border-radius: 5px;
     color: #fff;
     display: inline-block;
     font-size: 25px;
     min-width: 8%;
-    padding: 8px 5px;
+    padding: 10px 12px;
     vertical-align: top;
 }
 
 body.home .button:hover,
-.gform_button:hover,
-.search-results .pagination-nav a:hover {
-    background-color: #376a01;
-    border-color: #376a01;
-    color: #fff;
+.btn.btn-default.read-more.btn-search:hover,
+.gform_button,
+.search-results .pagination-nav a:hover,
+.navbar-default .navbar-nav li a:hover,
+.navbar-default .navbar-nav .active a:hover {
+    background-color: #336600;
+    border-color: #336600;
     text-decoration: none;
 }
 
@@ -127,12 +116,12 @@ body.home .entry-header {
 }
 
 body.home .tint {
-    background: rgba(0,0,0, 0.85);
+    background: rgba(0 ,0 ,0 , 0.7);
     padding: 180px 30px 0;
 }
 
 body.home {
-    background: rgba(0,0,0, 0.96);
+    background: rgba(0 ,0 ,0 ,0.85);
 }
 
 /* FIXME: this is terrible... */
@@ -170,11 +159,31 @@ body.home .tint {
 }
 
 .search-results.enterprise-list h2 a {
-    color: #6ba132;
+    color: #669933;
 }
 
 .gform_button,
-.search-results .pagination-nav a {
+.search-results .pagination-nav a,
+ {
     font-size: 14px;
 }
 
+/**
+ * Style menu buttons
+ */
+
+.navbar-default .navbar-nav li a:link,
+.navbar-default .navbar-nav li a:visited,
+.navbar-default .navbar-nav li a:active {
+	font-size: 14px;
+	margin: 5px;
+	padding: 3px 10px;
+}
+
+.search-results .pagination-nav a:hover,
+.navbar-default .navbar-nav li a:hover,
+.navbar-default .navbar-nav .active a:hover {
+	color: white;
+	margin: 5px;
+	padding: 3px 10px;
+}
