@@ -4,6 +4,34 @@
  */
 ?>
 
+<script>
+	jQuery(function() {
+		jQuery('.advanced-search-toggle').click(function(e) {
+			e.preventDefault();
+			jQuery( jQuery(this).attr('href') ).toggleClass('visuallyhidden');
+		});
+	});
+</script>
+
+<style scoped>
+	.visuallyhidden {
+		position: absolute; 
+		overflow: hidden; 
+		clip: rect(0 0 0 0); 
+		height: 1px; width: 1px; 
+		margin: -1px; padding: 0; border: 0;
+	}
+	.btn.btn-default.read-more.btn-search {
+		background: #6ba132;
+		color: #fff;
+		margin-left: 1em;
+	}
+	.btn.btn-default.read-more.btn-search:hover {
+		background: #fff;
+		color: #6ba132;
+	}
+</style>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
@@ -90,38 +118,44 @@
 			<input name="keyword" id="directory-search-title" type="search" value="">
 		</div>
 		
-		<div class="directory-search-row">
-			<p><strong>Cluster</strong></p>
-			<label for="directory-search-cluster">
-				<select id="directory-search-cluster" name="cluster">
-					<option value="">Select Cluster</option>
-					<?php foreach($cluster_field['choices'] as $option_key => $option_value) : ?>
-						<option value="<?php echo $option_value; ?>"<?php if($option_value == $cluster) {?> selected="selected"<?php } ?>><?php echo $option_value; ?></option>
-					<?php endforeach; ?>
-				</select>
-			</label>
-		</div>
+		<a href="#advanced-search" class="btn btn-default btn-search read-more advanced-search-toggle">Advanced Search</a> 
 		
-		<div class="directory-search-row">
-			<p><strong>Purpose</strong></p>
-			<label for="directory-search-purpose">
-				<select id="directory-search-purpose" name="purpose">
-					<option value="">Select Purpose</option>
-					<?php foreach($purpose_field['choices'] as $option_key => $option_value) : ?>
-						<option value="<?php echo $option_value; ?>"<?php if($option_value == $purpose) {?> selected="selected"<?php } ?>><?php echo $option_value; ?></option>
-					<?php endforeach; ?>
-				</select>
-			</label>
-		</div>
+		<div id="advanced-search visuallyhidden">
 		
-		<div class="directory-search-row">
-			<p><strong>Segments</strong></p>
-			<label for="directory-search-segment">
-				<?php foreach($segment_field['choices'] as $option_key => $option_value) : ?>
-				
-					<input type="checkbox"name="segments[]" value="<?php echo $option_value; ?>" id="directory-segment-<?php echo $option_key; ?>"<?php if(in_array($option_value, $segments)) {?> checked="checked"<?php } ?>> <label for="directory-segment-<?php echo $option_key; ?>"><?php echo $option_value; ?></label>
-				<?php endforeach; ?>
-			</label>
+			<div class="directory-search-row">
+				<p><strong>Category</strong></p>
+				<label for="directory-search-cluster">
+					<select id="directory-search-cluster" name="cluster">
+						<option value="">Select Category</option>
+						<?php foreach($cluster_field['choices'] as $option_key => $option_value) : ?>
+							<option value="<?php echo $option_value; ?>"<?php if($option_value == $cluster) {?> selected="selected"<?php } ?>><?php echo $option_value; ?></option>
+						<?php endforeach; ?>
+					</select>
+				</label>
+			</div>
+			
+			<div class="directory-search-row">
+				<p><strong>Purpose</strong></p>
+				<label for="directory-search-purpose">
+					<select id="directory-search-purpose" name="purpose">
+						<option value="">Select Purpose</option>
+						<?php foreach($purpose_field['choices'] as $option_key => $option_value) : ?>
+							<option value="<?php echo $option_value; ?>"<?php if($option_value == $purpose) {?> selected="selected"<?php } ?>><?php echo $option_value; ?></option>
+						<?php endforeach; ?>
+					</select>
+				</label>
+			</div>
+			
+			<div class="directory-search-row">
+				<p><strong>Segments</strong></p>
+				<label for="directory-search-segment">
+					<?php foreach($segment_field['choices'] as $option_key => $option_value) : ?>
+					
+						<input type="checkbox"name="segments[]" value="<?php echo $option_value; ?>" id="directory-segment-<?php echo $option_key; ?>"<?php if(in_array($option_value, $segments)) {?> checked="checked"<?php } ?>> <label for="directory-segment-<?php echo $option_key; ?>"><?php echo $option_value; ?></label>
+					<?php endforeach; ?>
+				</label>
+			</div>
+		
 		</div>
 		
 		<div class="directory-search-row">
