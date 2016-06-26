@@ -62,7 +62,7 @@ body.home .entry-content .tagline {
 }
 
 body.home .search-container {
-    background: transparent url("/wp-content/uploads/2016/06/background-50-cropped.jpg") no-repeat scroll 0% 0% / 100% auto;
+    background: transparent url("/wp-content/uploads/2016/06/background-cropped.jpg") no-repeat scroll 0% 0% / 100% auto;
     text-align: center;
 }
 
@@ -126,6 +126,6 @@ body.home .tint {
 }
 
 body.home {
-    background: rgba(0,0,0, 0.90);
+    background: rgba(0,0,0, 0.96);
 }
 
