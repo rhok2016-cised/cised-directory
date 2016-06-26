@@ -77,7 +77,8 @@ function dazzling_setup() {
    */
   add_theme_support( 'title-tag' );
   
-  wp_enqueue_style( 'custom', get_template_directory_uri() . '/custom.css', array('dazzling-style','dazzling-bootstrap') );
+  wp_enqueue_style( 'cised-custom', get_template_directory_uri() . '/custom.css', array('dazzling-style','dazzling-bootstrap') );
+  wp_enqueue_style( 'cised-search', get_template_directory_uri() . '/search.css', array('dazzling-style','dazzling-bootstrap', 'cised-custom') );
 }
 endif; // dazzling_setup
 add_action( 'after_setup_theme', 'dazzling_setup' );

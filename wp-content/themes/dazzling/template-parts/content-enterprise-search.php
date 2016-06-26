@@ -13,25 +13,6 @@
 	});
 </script>
 
-<style scoped>
-	.visuallyhidden {
-		position: absolute; 
-		overflow: hidden; 
-		clip: rect(0 0 0 0); 
-		height: 1px; width: 1px; 
-		margin: -1px; padding: 0; border: 0;
-	}
-	.btn.btn-default.read-more.btn-search {
-		background: #6ba132;
-		color: #fff;
-		margin-left: 1em;
-	}
-	.btn.btn-default.read-more.btn-search:hover {
-		background: #fff;
-		color: #6ba132;
-	}
-</style>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
