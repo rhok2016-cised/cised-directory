@@ -19,7 +19,9 @@
 	border-radius: 5px;
 	display: inline-block;
 	font-size: 25px;
+	font-weight: 100%;
 	margin-bottom: 15px;
+	padding: 5px 15px;
 	width: 100%;
 	border: 1px solid #999;
 }
