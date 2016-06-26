@@ -36,3 +36,96 @@ a:hover {
 	color: white;
 	background-color: #3b8c9c;
 }
+
+/**
+ * Homepage styles
+ */
+
+.splash-search {
+    background: url("/wp-content/uploads/2016/06/80283a_4bc515112b5d4de4a0858b9b7d1d1363.jpg") no-repeat;
+}
+
+body.home h1 {
+    display: none;
+}
+
+body.home .entry-content {
+    color: #fff;
+}
+
+body.home .entry-content .title {
+    font-size: 60px;
+}
+
+body.home .entry-content .tagline {
+    font-size: 32px;
+}
+
+body.home .search-container {
+    background: transparent url("/wp-content/uploads/2016/06/background-50-cropped.jpg") no-repeat scroll 0% 0% / 100% auto;
+    text-align: center;
+}
+
+body.home .search-field {
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 25px;
+    margin-bottom: 15px;
+    padding: 12px;
+    width: 50%;
+}
+
+body.home .button {
+    background: #6ba132;
+    border: 1px solid #6ba132;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-size: 25px;
+    min-width: 8%;
+    padding: 8px 5px;
+    vertical-align: top;
+}
+
+body.home .button:hover {
+    background-color: #376a01;
+    border-color: #376a01;
+    text-decoration: none;
+}
+
+body.home .button--search {
+    margin-right: 10px;
+}
+
+body.home .container {
+    padding: 0;
+    width: 100%;
+}
+
+body.home .navbar,
+body.home #footer-area {
+    display: none;
+}
+
+body.home #content,
+body.home .hentry,
+body.home .entry-content/*,
+body.home .entry-header*/ {
+    margin: 0;
+    padding: 0;
+}
+
+body.home .entry-header {
+    display: none;
+}
+
+body.home .tint {
+    background: rgba(0,0,0, 0.85);
+    padding: 180px 30px 0;
+}
+
+body.home {
+    background: rgba(0,0,0, 0.90);
+}
+
