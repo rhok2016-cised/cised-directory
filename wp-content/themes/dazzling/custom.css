@@ -110,8 +110,9 @@ body.home #footer-area {
 
 body.home #content,
 body.home .hentry,
-body.home .entry-content/*,
-body.home .entry-header*/ {
+body.home .entry-content,
+body.home .no-sidebar,
+body.home .content-area {
     margin: 0;
     padding: 0;
 }
