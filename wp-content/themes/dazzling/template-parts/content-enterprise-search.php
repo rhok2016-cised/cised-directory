@@ -140,7 +140,7 @@
 		<?php endwhile; endif; ?>
 		
 		<nav class="pagination-nav">
-			<?php previous_posts_link( 'Previous Page &raquo;', $filter_query->max_num_pages ); ?>
+			<?php previous_posts_link( '&laquo; Previous Page', $filter_query->max_num_pages ); ?>
 			<?php next_posts_link('Next Page &raquo;', $filter_query->max_num_pages ); ?>
 		</nav>
 	</div>
