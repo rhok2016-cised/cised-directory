@@ -129,3 +129,20 @@ body.home {
     background: rgba(0,0,0, 0.96);
 }
 
+/* FIXME: this is terrible... */
+html,
+body.home,
+body.home #page,
+body.home #content,
+body.home .site-content,
+body.home .main-content-area,
+body.home .no-sidebar,
+body.home #primary,
+body.home #main,
+body.home .hentry,
+body.home .entry-content,
+body.home .search-container,
+body.home .tint {
+    height: 100%;
+}
+
