@@ -153,9 +153,14 @@ body.home .tint {
  * Search results
  */
 
-.search-results.enterprise-list h2 {
-    border-top: 1px solid #ddd;
-    padding-top: 15px;
+.search-results.enterprise-list article {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.thumbnail {
+    border: 0;
 }
 
 .search-results.enterprise-list h2 a {
