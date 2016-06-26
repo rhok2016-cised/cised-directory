@@ -77,6 +77,7 @@ body.home .search-field {
 }
 
 body.home .button,
+.gform_button,
 .search-results .pagination-nav a {
     background: #6ba132;
     border: 1px solid #6ba132;
@@ -90,9 +91,11 @@ body.home .button,
 }
 
 body.home .button:hover,
+.gform_button:hover,
 .search-results .pagination-nav a:hover {
     background-color: #376a01;
     border-color: #376a01;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -170,6 +173,7 @@ body.home .tint {
     color: #6ba132;
 }
 
+.gform_button,
 .search-results .pagination-nav a {
     font-size: 14px;
 }
