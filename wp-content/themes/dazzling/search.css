@@ -14,3 +14,12 @@
 	background: #fff;
 	color: #6ba132;
 }
+
+#directory-search-title {
+	border-radius: 5px;
+	display: inline-block;
+	font-size: 25px;
+	margin-bottom: 15px;
+	width: 100%;
+	border: 1px solid #999;
+}

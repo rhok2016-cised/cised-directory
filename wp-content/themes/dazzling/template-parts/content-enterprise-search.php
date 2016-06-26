@@ -95,8 +95,8 @@
 	
 	<form method="get" id="directory-search" class="clear">
 		<div class="directory-search-row">
-			<label for="directory-search-title">Name</label>
-			<input name="keyword" id="directory-search-title" type="search" value="">
+			<label for="directory-search-title" class="visuallyhidden">Search</label>
+			<input name="keyword" id="directory-search-title" type="search" value="" placeholder="Find Social Enterprises">
 		</div>
 		
 		<div id="advanced-search" class="visuallyhidden">
@@ -139,7 +139,7 @@
 		
 		<div class="directory-search-row clear">
 			<a href="<?php echo get_permalink(34); ?>" class="btn btn-default btn-search read-more">Reset</a> 
-			<input type="submit" class="btn btn-default read-more">
+			<input type="submit" class="btn btn-default btn-search read-more">
 		</div>
 		
 		<div class="directory-search-row clear">
