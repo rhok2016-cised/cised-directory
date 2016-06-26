@@ -99,9 +99,7 @@
 			<input name="keyword" id="directory-search-title" type="search" value="">
 		</div>
 		
-		<a href="#advanced-search" class="btn btn-default btn-search read-more advanced-search-toggle">Advanced Search</a> 
-		
-		<div id="advanced-search visuallyhidden">
+		<div id="advanced-search" class="visuallyhidden">
 		
 			<div class="directory-search-row">
 				<p><strong>Category</strong></p>
@@ -139,9 +137,13 @@
 		
 		</div>
 		
-		<div class="directory-search-row">
-			<a href="<?php echo get_permalink(34); ?>" class="btn btn-default read-more">Reset</a> 
+		<div class="directory-search-row clear">
+			<a href="<?php echo get_permalink(34); ?>" class="btn btn-default btn-search read-more">Reset</a> 
 			<input type="submit" class="btn btn-default read-more">
+		</div>
+		
+		<div class="directory-search-row clear">
+			<a href="#advanced-search" class="btn btn-default btn-search read-more advanced-search-toggle">Advanced Search</a>
 		</div>
 	</form>
 	
