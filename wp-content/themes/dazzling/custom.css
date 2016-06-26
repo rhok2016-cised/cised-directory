@@ -76,7 +76,8 @@ body.home .search-field {
     width: 50%;
 }
 
-body.home .button {
+body.home .button,
+.search-results .pagination-nav a {
     background: #6ba132;
     border: 1px solid #6ba132;
     border-radius: 5px;
@@ -88,7 +89,8 @@ body.home .button {
     vertical-align: top;
 }
 
-body.home .button:hover {
+body.home .button:hover,
+.search-results .pagination-nav a:hover {
     background-color: #376a01;
     border-color: #376a01;
     text-decoration: none;
@@ -145,5 +147,30 @@ body.home .entry-content,
 body.home .search-container,
 body.home .tint {
     height: 100%;
+}
+
+/**
+ * Social Enterprise pages (single-enterprise)
+ */
+
+.social-enterprise .wp-post-image {
+    width: 96px;
+}
+
+/**
+ * Search results
+ */
+
+.search-results.enterprise-list h2 {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.search-results.enterprise-list h2 a {
+    color: #6ba132;
+}
+
+.search-results .pagination-nav a {
+    font-size: 14px;
 }
 
