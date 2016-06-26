@@ -154,9 +154,9 @@
 	<div class="search-results enterprise-list" class="clear">
 		<?php if ( $filter_query->have_posts() ) : while ( $filter_query->have_posts() ) : $filter_query->the_post(); ?>
 		<article>
-			<div class="thumbnail" style="display: inline-block; max-width: 250px;">
+			<a href="<?php echo get_permalink($post->ID); ?>" class="thumbnail" style="display: inline-block; max-width: 250px;">
 				<?php the_post_thumbnail('medium'); ?>
-			</div>
+			</a>
 			<h2><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $post->post_title; ?></a></h2>
 			<?php echo get_field('description_of_business', $post->ID); ?>
 		</article>

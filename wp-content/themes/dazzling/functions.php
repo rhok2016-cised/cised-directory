@@ -79,6 +79,13 @@ function dazzling_setup() {
   
   wp_enqueue_style( 'cised-custom', get_template_directory_uri() . '/custom.css', array('dazzling-style','dazzling-bootstrap') );
   wp_enqueue_style( 'cised-search', get_template_directory_uri() . '/search.css', array('dazzling-style','dazzling-bootstrap', 'cised-custom') );
+  
+  $args = array(
+    'width'         => 200,
+    'height'        => 107,
+    'default-image' => get_template_directory_uri() . '/inc/img/header.jpg',
+  );
+add_theme_support( 'custom-header', $args );
 }
 endif; // dazzling_setup
 add_action( 'after_setup_theme', 'dazzling_setup' );
