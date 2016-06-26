@@ -1,5 +1,7 @@
 # CISED Directory Project
 
+![splash]((http://github.com/rhok2016-cised/cised-directory/images/splash.png)
+
 CISED Directory Project is an interactive platform that enables consumers of all types to sources goods and services from Ottawa’s vibrant social enterprise sector
 
 More and more purchasers at the individual, corporate, and public level want to leverage their purchasing dollars for greater social and economic impact. At the same time, Ottawa-based social enterprises are searching for innovative marketing tools to extend their reach and build profile for a growing range of products and services.
