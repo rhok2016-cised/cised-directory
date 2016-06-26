@@ -91,6 +91,10 @@
 		$args['meta_query'] = $args_meta;
 		
 		$filter_query = new WP_Query($args);
+		
+		if($keyword) {
+			relevanssi_do_query($filter_query);
+		}
 	?>
 	
 	<form method="get" id="directory-search" class="clear">
