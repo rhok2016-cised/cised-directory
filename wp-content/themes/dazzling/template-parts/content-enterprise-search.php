@@ -103,7 +103,7 @@
 			<input name="keyword" id="directory-search-title" type="search" value="" placeholder="Find Social Enterprises">
 		</div>
 		
-		<div id="advanced-search" class="visuallyhidden">
+		<div id="advanced-search"<?php if(!$cluster && !$purpose && !$segments) { ?> class="visuallyhidden"<?php } ?>>
 		
 			<div class="directory-search-row">
 				<p><strong>Category</strong></p>
@@ -154,7 +154,7 @@
 	<div class="search-results enterprise-list" class="clear">
 		<?php if ( $filter_query->have_posts() ) : while ( $filter_query->have_posts() ) : $filter_query->the_post(); ?>
 		<article>
-			<?php the_post_thumbnail('post-thumbnail'); ?>
+			<?php the_post_thumbnail('medium'); ?>
 			<h2><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $post->post_title; ?></a></h2>
 			<?php echo get_field('description_of_business', $post->ID); ?>
 		</article>
