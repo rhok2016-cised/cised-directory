@@ -1,6 +1,6 @@
 # CISED Directory Project
 
-![splash]((https://github.com/rhok2016-cised/cised-directory/wiki/images/splash.png)
+![splash](https://github.com/rhok2016-cised/cised-directory/wiki/images/splash.png)
 
 CISED Directory Project is an interactive platform that enables consumers of all types to sources goods and services from Ottawa’s vibrant social enterprise sector
 
